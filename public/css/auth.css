@@ -1,0 +1,70 @@
+main {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container,
+.notification {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 1.5rem;
+    width: 24rem;
+}
+
+label,
+input {
+    font-size: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: .2rem 1rem;
+}
+
+input {
+    width: 100%;
+    padding: .2rem;
+}
+
+input[type="submit"] {
+    grid-column: 1 / 3;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.form-row {
+    margin-bottom: .5rem;
+}
+
+.error {
+    color: #bf0000;
+    font-weight: bold;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.notification {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.notification.success {
+    border: 2px solid #009300;
+    background-color: #d9ffd9;
+    color: #009300;
+}
+
+.notification.fail {
+    border: 2px solid #bf0000;
+    background-color: #ffd9d9;
+    color: #bf0000;
+}
